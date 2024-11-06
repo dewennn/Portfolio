@@ -5,7 +5,7 @@ import Projects from "./pages/Projects";
 
 function App() {
   return (
-    <HashRouter  basename="/Portfolio">
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/about-me" element={<About />} />

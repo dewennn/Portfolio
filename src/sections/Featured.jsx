@@ -14,7 +14,7 @@ const Featured = () => {
       }
     </div>
     
-    <a href='/projects' className='flex justify-end px-10 pb-10 font-bold text-2xl items-center gap-4 text-mygray'>
+    <a href='/#/projects' className='flex justify-end px-10 pb-10 font-bold text-2xl items-center gap-4 text-mygray'>
       <div>
         <img className='w-7 opacity-70' src={`${process.env.PUBLIC_URL}/assets/iconBlack/eyes.png`} alt="" />
       </div>

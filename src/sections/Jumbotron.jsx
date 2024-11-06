@@ -13,7 +13,7 @@ const Jumbotron = () => {
           Full-stack <i>developer</i> | Machine Learning <i>engineer</i> | Part-time <i>teacher</i>
         </h2>
         
-        <a className='flex gap-2 items-center' href="/about-me">
+        <a className='flex gap-2 items-center' href="/#/about-me">
           <div>
             <img className='w-4 h-auto' src={`${process.env.PUBLIC_URL}/assets/iconGray/diagonal.png`} alt="" />
           </div>

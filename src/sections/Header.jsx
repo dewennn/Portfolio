@@ -38,8 +38,8 @@ const Header = () => {
 
       <div className='text-white flex flex-col font-semibold text-3xl gap-5 mt-10'>
         <a href="/">Home</a>
-        <a href="/projects">Projects</a>
-        <a href="/about-me">About Me</a>
+        <a href="/#/projects">Projects</a>
+        <a href="/#/about-me">About Me</a>
       </div>
 
       <div>
