@@ -24,10 +24,10 @@ const Jumbotron = () => {
 
       {/* buttons */}
       <div className='flex gap-3 justify-center'>
-        <button className='flex items-center justify-center border-2 border-black px-5 py-2 gap-3 hover:filter hover:invert bg-white transition-all ease-in-out'>
+        <a href='https://drive.google.com/file/d/160GYDsl6MQKkscIRTpaiFcwTlSRYN71D/view?usp=sharing' target='_blank' className='flex items-center justify-center border-2 border-black px-5 py-2 gap-3 hover:filter hover:invert bg-white transition-all ease-in-out'>
           <p className='font-bold'>CV</p>
           <img className='w-10' src={`${process.env.PUBLIC_URL}/assets/iconBlack/download.png`} alt="" />
-        </button>
+        </a>
 
         <a href='https://www.linkedin.com/in/derren-malaka/' target='_blank' className='flex items-center justify-center border-2 border-black px-5 py-2 gap-3 hover:filter hover:invert bg-white transition-all ease-in-out'>
           <p className='font-bold'>LinkedIn</p>
