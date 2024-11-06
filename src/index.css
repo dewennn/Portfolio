@@ -1,13 +1,28 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.manrope {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.cormorant {
+  font-family: "Cormorant", serif;
+  font-optical-sizing: auto;
+}
+
+.text-myblack{
+  color: #161616;
+}
+
+.bg-myblack{
+  background-color: #161616;
+}
+
+.text-mygray{
+  color: #797878;
+}
+.bg-mygray{
+  background-color: #797878;
 }
