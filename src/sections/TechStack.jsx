@@ -10,7 +10,7 @@ const TechStack = () => {
         {techStack.map((item) => (
           <div className={`${item.focus ? 'border-4 border-[#2BB850]' : 'border-2'} flex flex-col justify-center items-center p-10 gap-5 w-40 sm:w-60 sm:h-60`}>
             <div className='flex justify-center'>
-              <img className='w-1/2' src={`${process.env.PUBLIC_URL}assets/iconColor/${item.img}.png`} alt="" />
+              <img className='w-1/2' src={`${process.env.PUBLIC_URL}/assets/iconColor/${item.img}.png`} alt="" />
             </div>
 
             <h1 className='font-bold text-center'>{item.name}</h1>
