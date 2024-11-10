@@ -3,53 +3,75 @@ import Header from '../sections/Header'
 import Footer from '../sections/Footer'
 import { projects } from '../data'
 
-const Projects = () => {
-  const[highlight, setHighlight] = useState(0)
+const Projects = ({setChoice}) => {
 
   return (
     <div className='manrope'>
       <Header />
 
-      <div>
-        <h1 className='text-6xl font-bold p-10'>Projects</h1>
-
-        <div className='flex px-10 py-5 gap-2'>
-          <div className='w-1/3 flex flex-col gap-3'>
-            <div className='h-[250px]'>
-              <img className='h-full object-cover' src={`${process.env.PUBLIC_URL}/images/${projects[highlight].thumbnail}`} alt="" />
+      <div className='flex flex-col gap-5 m-10 p-2 rounded-lg'>
+      {
+        projects.map((project, idx) => (
+          <div className='flex flex-col lg:flex-row w-full gap-5 items-center lg:items-stretch'>
+            <div className='w-full lg:w-1/3 flex justify-center'>
+              <img className='sm:w-full md:w-2/3 lg:w-full rounded-lg' src={`${process.env.PUBLIC_URL}/images/${project.thumbnail}`} alt="" />
             </div>
-            
-            <p>{projects[highlight].desc}</p>
-          </div>
 
-          <div className='w-2/3 flex flex-col gap-3 bg-[#EAEAEA] p-2 h-[400px]'>
-            {
-              projects.map((project, idx) => (
-                <div onMouseEnter={() => {setHighlight(idx)}} className={`transition-all ease-in-out flex items-center font-semibold text-xl rounded-lg px-4 py-2 ${idx === highlight ? "bg-myblack text-white" : "bg-white text-myblack"}`}>
-                  <div className='w-60 flex scroll-px-3.5'>{project.name}</div>
-                  <div>|</div>
+            <div className='w-full md:w-2/3 bg-[#f3f3f3] rounded-lg py-2 px-4 flex flex-col'>
+              <div className='flex items-center justify-between gap-5 mb-5'>
+                <h1 className='sm:text-xl md:text-2xl font-semibold'>{project.name}</h1>
 
-                  <div className='flex w-full items-center'>
-                    <div className='w-full flex px-3'>{project.label}</div>
-                    <div>|</div>
-
-                    <div className='flex gap-3 w-full px-3'>
-                      {
-                        project.stack.map((i) => (
-                          <div className='w-10'>
-                            <img src={`${process.env.PUBLIC_URL}/assets/iconColor/${i}.png`} alt="" />
-                          </div>
-                        ))
-                      }
+                <div className='flex'>
+                  {project.stack.map((stack) => (
+                    <div className='w-5 sm:w-10'>
+                      <img src={`${process.env.PUBLIC_URL}/assets/iconColor/${stack}.png`} alt="" />
                     </div>
-                  </div>
-                  
+                  ))}
                 </div>
-              ))
-            }
+              </div>
+              
+              <div className='flex h-[70%]'>
+                <div className='w-1/2 hidden lg:block'>
+                  <h1 className='font-semibold'>Features</h1>
+                  <ul className='list-disc list-outside px-5'>
+                    {project.features.map((feature) => (
+                      <li>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className='flex w-full lg:w-1/2 sm:gap-3 flex-col justify-between'>
+                    <div className='flex gap-2 items-center text-[10px] sm:text-base'>
+                      <h1>{project.year}</h1>
+                      <p>|</p>
+                      <h1>{project.label}</h1>
+                      <p>|</p>
+                      <h1>{project.role}</h1>
+                    </div>
+
+                    <div className='flex'>
+                      <a
+                        href='/Portfolio/#/project-detail'
+
+                        onClick={
+                          () => {setChoice(idx)}
+                        }
+                        
+                        className={`transition-all ease-in-out flex items-center rounded-lg font-semibold text-xs sm:text-base underline`}>
+                          Details
+                      </a>
+                    </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        ))
+      }
       </div>
+
+      <Footer />
     </div>
   )
 }

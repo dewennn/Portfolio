@@ -1,4 +1,5 @@
 import React from 'react'
+import { links } from '../data'
 
 const Jumbotron = () => {
   return (
@@ -13,7 +14,7 @@ const Jumbotron = () => {
           Full-stack <i>developer</i> | Machine Learning <i>engineer</i> | Part-time <i>teacher</i>
         </h2>
         
-        <a className='flex gap-2 items-center' href="/#/about-me">
+        <a className='flex gap-2 items-center' href="/Portfolio/#/about-me">
           <div>
             <img className='w-4 h-auto' src={`${process.env.PUBLIC_URL}/assets/iconGray/diagonal.png`} alt="" />
           </div>
@@ -23,20 +24,20 @@ const Jumbotron = () => {
       </div>
 
       {/* buttons */}
-      <div className='flex gap-3 justify-center'>
-        <a href='https://drive.google.com/file/d/160GYDsl6MQKkscIRTpaiFcwTlSRYN71D/view?usp=sharing' target='_blank' className='flex items-center justify-center border-2 border-black px-5 py-2 gap-3 hover:filter hover:invert bg-white transition-all ease-in-out'>
+      <div className='flex gap-3 justify-center text-[12px] sm:text-base'>
+        <a href={links.cv} target='_blank' className='flex items-center justify-center border-2 border-black px-5 py-2 gap-3 hover:filter hover:invert bg-white transition-all ease-in-out'>
           <p className='font-bold'>CV</p>
-          <img className='w-10' src={`${process.env.PUBLIC_URL}/assets/iconBlack/download.png`} alt="" />
+          <img className='w-5 sm:w-10' src={`${process.env.PUBLIC_URL}/assets/iconBlack/download.png`} alt="" />
         </a>
 
-        <a href='https://www.linkedin.com/in/derren-malaka/' target='_blank' className='flex items-center justify-center border-2 border-black px-5 py-2 gap-3 hover:filter hover:invert bg-white transition-all ease-in-out'>
+        <a href={links.linkedin} target='_blank' className='flex items-center justify-center border-2 border-black px-5 py-2 gap-3 hover:filter hover:invert bg-white transition-all ease-in-out'>
           <p className='font-bold'>LinkedIn</p>
-          <img className='w-10' src={`${process.env.PUBLIC_URL}/assets/iconBlack/linkedin.png`} alt="" />
+          <img className='w-5 sm:w-10' src={`${process.env.PUBLIC_URL}/assets/iconBlack/linkedin.png`} alt="" />
         </a>
 
-        <a href='https://github.com/dewennn' target='_blank' className='flex items-center justify-center border-2 border-black px-5 py-2 gap-3 hover:filter hover:invert bg-white transition-all ease-in-out'>
+        <a href={links.github} target='_blank' className='flex items-center justify-center border-2 border-black px-5 py-2 gap-3 hover:filter hover:invert bg-white transition-all ease-in-out'>
           <p className='font-bold'>Github</p>
-          <img className='w-10' src={`${process.env.PUBLIC_URL}/assets/iconBlack/github.png`} alt="" />
+          <img className='w-5 sm:w-10' src={`${process.env.PUBLIC_URL}/assets/iconBlack/github.png`} alt="" />
         </a>
       </div>
     </div>

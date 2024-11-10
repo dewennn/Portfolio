@@ -1,38 +1,38 @@
 import React from 'react'
 import Header from '../sections/Header'
 import Footer from '../sections/Footer'
-import { experience } from '../data'
+import { experience, links } from '../data'
 
 const About = () => {
   return (
     <div className='manrope'>
       <Header />
 
-      <div className='px-20 pt-10 pb-64'>
+      <div className='px-8 sm:px-20 pt-10 pb-32 sm:pb-64'>
         <div className='flex flex-col gap-3'>
-          <h1 className='text-7xl font-bold'>About Me</h1>
+          <h1 className='text-4xl sm:text-7xl font-bold'>About Me</h1>
           <div className='flex gap-1'>
-            <a href='https://drive.google.com/file/d/160GYDsl6MQKkscIRTpaiFcwTlSRYN71D/view?usp=sharing' target='_blank' className='flex items-center justify-center border-2 border-black px-5 py-2 gap-3 hover:filter hover:invert bg-white transition-all ease-in-out'>
+            <a href={links.cv} target='_blank' className='flex items-center justify-center border-2 border-black px-5 py-2 gap-3 hover:filter hover:invert bg-white transition-all ease-in-out text-[12px] sm:text-base'>
               <p className='font-bold'>CV</p>
-              <img className='w-10' src={`${process.env.PUBLIC_URL}/assets/iconBlack/download.png`} alt="" />
+              <img className='w-5 sm:w-10' src={`${process.env.PUBLIC_URL}/assets/iconBlack/download.png`} alt="" />
             </a>
 
-            <a href='https://www.linkedin.com/in/derren-malaka/' target='_blank' className='flex items-center justify-center border-2 border-black px-5 py-2 gap-3 hover:filter hover:invert bg-white transition-all ease-in-out'>
+            <a href={links.linkedin} target='_blank' className='flex items-center justify-center border-2 border-black px-5 py-2 gap-3 hover:filter hover:invert bg-white transition-all ease-in-out text-[12px] sm:text-base'>
               <p className='font-bold'>LinkedIn</p>
-              <img className='w-10' src={`${process.env.PUBLIC_URL}/assets/iconBlack/linkedin.png`} alt="" />
+              <img className='w-5 sm:w-10' src={`${process.env.PUBLIC_URL}/assets/iconBlack/linkedin.png`} alt="" />
             </a>
 
-            <a href='https://github.com/dewennn' target='_blank' className='flex items-center justify-center border-2 border-black px-5 py-2 gap-3 hover:filter hover:invert bg-white transition-all ease-in-out'>
+            <a href={links.github} target='_blank' className='flex items-center justify-center border-2 border-black px-5 py-2 gap-3 hover:filter hover:invert bg-white transition-all ease-in-out text-[12px] sm:text-base'>
               <p className='font-bold'>Github</p>
-              <img className='w-10' src={`${process.env.PUBLIC_URL}/assets/iconBlack/github.png`} alt="" />
+              <img className='w-5 sm:w-10' src={`${process.env.PUBLIC_URL}/assets/iconBlack/github.png`} alt="" />
             </a>
           </div>
         </div>
         
         <div className='flex flex-col lg:flex-row py-10 gap-5'>
           <div className='w-full'>
-            <h1 className='font-semibold text-2xl'>Hi! I'm Derren Malaka</h1>
-            <ul className='list-disc list-outside pl-4 flex flex-col gap-4 text-lg'>
+            <h1 className='font-semibold text-2xl mb-5'>Hi! I'm Derren Malaka</h1>
+            <ul className='list-disc list-outside pl-4 flex flex-col gap-4 sm:text-lg'>
               <li>
                 I’m a machine learning engineer and a developer currently focusing on Mobile Programming with Java.
               </li>
@@ -53,7 +53,7 @@ const About = () => {
             <div className='flex flex-col gap-3 text-mygray'>
               {experience.map((job) => (
                 <div>
-                  <h2 className='text-lg font-semibold'>{job.title} | {job.company}</h2>
+                  <h2 className='sm:text-lg font-semibold'>{job.title} | {job.company}</h2>
                   <p>{job.duration}</p>
                 </div>
               ))}

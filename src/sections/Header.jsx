@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { links } from '../data'
 
 const Header = () => {
 
@@ -18,7 +19,7 @@ const Header = () => {
     <>
     {/* Header */}
     <header className='fixed top-0 left-0 right-0 flex justify-between px-10 py-5 z-10 bg-white'>
-      <a className='w-10' href='/'>
+      <a className='w-10' href='/Portfolio/'>
         <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="" />
       </a>
       <button className='w-10' onClick={() => {showSidebar()}}>
@@ -37,13 +38,13 @@ const Header = () => {
       </div>
 
       <div className='text-white flex flex-col font-semibold text-3xl gap-5 mt-10'>
-        <a href="/">Home</a>
-        <a href="/#/projects">Projects</a>
-        <a href="/#/about-me">About Me</a>
+        <a href="/Portfolio">Home</a>
+        <a href="/Portfolio/#/projects">Projects</a>
+        <a href="/Portfolio/#/about-me">About Me</a>
       </div>
 
       <div>
-
+        
       </div>
     </div>
 
