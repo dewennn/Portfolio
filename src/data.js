@@ -39,7 +39,7 @@ export const projects = [
     <p><b>Development:</b> We want to divide the songs to groups of "genre". But since there are no clear objective division of music genre. We decide to use "Optimal K Algorithm" {"("}Elbow & Silhoutte Method{")"} and decide to divide it to 11 group. We recommend similar musics by using the cosine-similarity function on the features compared to songs within the same cluster. Finally for user's taste we divide the songs within their "taste profile" based on their cluster, calculate the average, and then return songs that are most similar to the average of each division.</p>
     ],
 
-    features: ["Data Preprocessing", "Optimal K Algorithm", "PCA Algorithm", "K-Means Clustering", "RESTful API made with Flask"],
+    keyComponents: ["Data Preprocessing", "Optimal K Algorithm", "PCA Algorithm", "K-Means Clustering", "RESTful API made with Flask"],
     thumbnail: "beatBuddy/search.png",
     images: ["beatBuddy/search.png", "beatBuddy/recommendations.png"]
   },
@@ -57,45 +57,29 @@ export const projects = [
     <p><b>Development:</b> We want to only use features that a regular person can get access to without proffesinal help. So we decide to only use these features {'('}age, bmi, blood pressire, and pregnancies count{')'}. We preprocess the data and then train three different model: KNN, SVM, and Logistic Regression. The final accuracy result is KNN: 96.7%; SVM: 68.8%; and Logistic Regression: 64.8%. So finally we use the KNN model for the production.</p>
     ],
   
-    features: ["Data Preprocessing (scaling & handling imbalance)", "KNN", "SVM", "Logistic Regression" , "K-Means Clustering", "RESTful API made with Flask"],
+    keyComponents: ["Data Preprocessing (scaling & handling imbalance)", "KNN", "SVM", "Logistic Regression" , "K-Means Clustering", "RESTful API made with Flask"],
     thumbnail: "diabeTest/dashboard.png",
     images: ["diabeTest/dashboard.png"]
   },
   {
-    name: "Bee-a-Scholar",
-    desc: "Bee-a-Scholar is a Web Application that I'm working on in a team of five people. We are tasked to create a market analysis for a service that we'll make. We decide to create a web application that connects scholarship provider and receiver.",
-    stack: ["react", "figma", "firebase"],
+    name: "Hology Data Mining Competition",
+    desc: 'This is a team submission for the "Hology" Data Mining Competition hosted by Universitas Brawijaya, finishing in the top 20 out of over 90 teams. As my first competition experience, it was incredibly rewarding and offered valuable lessons. I learned how to collaborate effectively under tight deadlines, engage in meaningful discussions, and coordinate efforts to maximize our strengths as a team.',
+    stack: ["python", "tensorflow"],
     year: 2024,
-    label: "Full-Stack CRUD Web",
-    role: "Tech Lead",
-    developmentProcess: "",
-    features: [""],
-    thumbnail: "beeAScholar/splashScreen.png",
-    images: [""]
-  },
-  {
-    name: "Lend-a-Hand",
-    desc: "Lend-a-Hand is concept web application that acts as a platform that facilitates connections between donors and social activity organizers. Our mission is to empower individuals and organizations by streamlining the process of supporting local initiatives and community projects. It's a full-stack web application that implements CRUD functionality with react and firebase.",
-    stack: ["react", "figma", "firebase"],
-    year: 2024,
-    label: "Full-Stack CRUD Web",
-    role: "Tech Lead",
-    developmentProcess: "",
-    features: [""],
-    thumbnail: "lendAHand/dashboard.png",
-    images: [""]
-  },
-  {
-    name: "Garden to Table",
-    desc: "This is a web design for a fictional service named Garden to Table that serve fresh natural food straight to consumer.",
-    stack: ["figma"],
-    year: 2024,
-    label: "UI/UX Design",
-    role: "Designer",
-    developmentProcess: "",
-    features: [""],
-    thumbnail: "gardenToTable/dashboard.png",
-    images: [""]
+    label: "Multi Label Image Classification",
+    role: "Co-developer",
+
+    developmentProcess: [
+      <p><b>What this project aims to solve:</b> Classify images with multiple labels {'type (t-shirt or hoodie) and color (red, yellow, blue, black, white)'}, focusing on accuracy and efficiency in handling image data.</p>,
+      <p><b>Background:</b> The project utilizes a dataset provided for the Hology competition by Universitas Brawijaya. The dataset includes images with multiple labels, presenting a complex classification challenge. The goal was to implement an efficient, accurate model to handle this multi-label classification task. Besides the final model performance, the code structure, decription, and explanation are also graded.</p>,
+      <p><b>Development:</b> From the given dataset we preprocess the images by normalizing the pixels value and using tensorlow to covert it to a tensor. Then we use SMOTE oversampling to balance the dataset. We use two different model to each predict the color and type. For color we use a CNN model and for type we use a CNN model with VGG16 architecture. Our final model performance measured with Exact Match Ratio is: 92.7%.
+      </p>
+    ],
+  
+
+    keyComponents: ["Image Preprocessing", "Handling data imbalance", "CNN Model", "Hyperparameter Tuning"],
+    thumbnail: "hology/prediction.png",
+    images: ["hology/prediction.png", "hology/result.png"]
   }
 ]
 

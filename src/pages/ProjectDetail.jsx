@@ -49,7 +49,7 @@ const ProjectDetail = ({index = 0}) => {
         </div>
       </div>
 
-      <div className='flex flex-col-reverse md:flex-row gap-10 md:gap-3 mb-20'>
+      <div className='flex flex-col-reverse md:flex-row gap-10 mb-20'>
         <div className='w-full'>
           <h1 className='text-2xl font-bold mb-3 underline'>Development Process</h1>
           <div className='flex flex-col gap-7'>
@@ -62,9 +62,9 @@ const ProjectDetail = ({index = 0}) => {
         </div>
 
         <div className='w-full'>
-          <h1 className='text-2xl font-bold mb-3 underline'>Features</h1>
+          <h1 className='text-2xl font-bold mb-3 underline'>Key Components</h1>
           <ul className='list-disc list-outside px-5'>
-            {projects[index].features.map((feature) => (
+            {projects[index].keyComponents.map((feature) => (
               <li>
                 {feature}
               </li>
@@ -75,7 +75,7 @@ const ProjectDetail = ({index = 0}) => {
 
       <div>
         <h1 className='text-2xl font-bold mb-3 underline'>Gallery</h1>
-        <div className='flex flex-wrap gap-3'>
+        <div className='flex flex-wrap items-center gap-3'>
           {projects[index].images.map((img) => (
             <div className='w-full md:w-[49%]'>
               <img src={`${process.env.PUBLIC_URL}/images/${img}`} alt="" />

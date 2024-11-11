@@ -12,8 +12,8 @@ const Projects = ({setChoice}) => {
       <div className='flex flex-col gap-5 m-10 p-2 rounded-lg'>
       {
         projects.map((project, idx) => (
-          <div className='flex flex-col lg:flex-row w-full gap-5 items-center lg:items-stretch'>
-            <div className='w-full lg:w-1/3 flex justify-center'>
+          <div className='flex flex-col lg:flex-row w-full gap-2 items-center lg:items-stretch lg:min-h-[250px]'>
+            <div className='w-full lg:w-1/3 flex items-center justify-center p-2 bg-[#f3f3f3] rounded-lg'>
               <img className='sm:w-full md:w-2/3 lg:w-full rounded-lg' src={`${process.env.PUBLIC_URL}/images/${project.thumbnail}`} alt="" />
             </div>
 
@@ -32,9 +32,9 @@ const Projects = ({setChoice}) => {
               
               <div className='flex h-[70%]'>
                 <div className='w-1/2 hidden lg:block'>
-                  <h1 className='font-semibold'>Features</h1>
+                  <h1 className='font-semibold'>Key Components</h1>
                   <ul className='list-disc list-outside px-5'>
-                    {project.features.map((feature) => (
+                    {project.keyComponents.map((feature) => (
                       <li>
                         {feature}
                       </li>
