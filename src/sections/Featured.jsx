@@ -17,10 +17,10 @@ const Featured = () => {
     <a href='/Portfolio/#/projects' className='flex justify-end px-10 pt-10 sm:text-2xl items-center gap-4 text-mygray'>
 
       <div>
-        <img className='w-3 sm:w-5' src={`${process.env.PUBLIC_URL}/assets/iconGray/diagonal.png`} alt="" />
+        <img className='w-3 sm:w-5 animate-bounce' src={`${process.env.PUBLIC_URL}/assets/iconGray/diagonal.png`} alt="" />
       </div>
       
-      <p>See all project {"["}{projects.length}{"]"}</p>
+      <p className='font-semibold'>See all project {"["}{projects.length}{"]"}</p>
     </a>
 
     <hr className='mx-5 sm:mx-10' />

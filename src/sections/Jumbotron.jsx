@@ -7,19 +7,19 @@ const Jumbotron = () => {
       <div className='flex flex-col items-center gap-2'>
         <div className='font-bold flex gap-3 sm:gap-5 items-center'>
           <h1 className='text-4xl sm:text-7xl'>Hi, I'm Derren</h1>
-          <img className='w-8 h-8 sm:w-20 sm:h-20' src={`${process.env.PUBLIC_URL}/assets/iconBlack/hand_wave.png`} alt="" />
+          <img className='w-8 h-8 sm:w-20 sm:h-20 animate-wave' src={`${process.env.PUBLIC_URL}/assets/iconBlack/hand_wave.png`} alt="" />
         </div>
 
         <h2 className='cormorant font-semibold text-base sm:text-lg md:text-3xl'>
           Full-stack <i>developer</i> | Machine Learning <i>engineer</i> | Part-time <i>teacher</i>
         </h2>
         
-        <a className='flex gap-2 items-center' href="/Portfolio/#/about-me">
+        <a className='flex gap-2 items-center animate-pulse' href="/Portfolio/#/about-me">
           <div>
             <img className='w-4 h-auto' src={`${process.env.PUBLIC_URL}/assets/iconGray/diagonal.png`} alt="" />
           </div>
           
-          <p className='underline text-myGray text-[20px]'>About Me</p>
+          <p className='underline font-semibold text-myGray text-[20px]'>About Me</p>
         </a>
       </div>
 

@@ -4,16 +4,31 @@ import Jumbotron from '../sections/Jumbotron'
 import Featured from '../sections/Featured'
 import TechStack from '../sections/TechStack'
 import Footer from '../sections/Footer'
+import { motion } from 'framer-motion';
 
 const Main = () => {
+
+  const pageTransition = {
+    initial: { opacity: 0, x: -50 },
+    animate: { opacity: 1, x: 0 },
+    exit: { opacity: 0, x: 50 },
+  };
+
   return (
-    <div className='manrope'>
-      <Header />
-      <Jumbotron />
-      <Featured />
-      <TechStack />
-      <Footer />
-    </div>
+    <motion.div
+    className="manrope"
+    initial="initial"
+    animate="animate"
+    exit="exit"
+    variants={pageTransition}
+    transition={{ duration: 0.5 }}
+  >
+    <Header />
+    <Jumbotron />
+    <Featured />
+    <TechStack />
+    <Footer />
+  </motion.div>
   )
 }
 

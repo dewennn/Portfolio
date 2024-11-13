@@ -32,6 +32,7 @@ export const projects = [
     year: 2024,
     label: "Music Recommender",
     role: "Lead Developer",
+    link: "https://github.com/dewennn/Beat-Buddy",
 
     developmentProcess: [
     <p><b>What this project aim to solve:</b> Recommend similar musics to a music given by the user and a playlist of song  based on the user's taste.</p>,
@@ -50,6 +51,7 @@ export const projects = [
     year: 2024,
     label: "ML Classifier",
     role: "Developer",
+    link: "https://github.com/Hndra04/Diabetest",
     
     developmentProcess: [
     <p><b>What this project aim to solve:</b> Give a prediction whether or not someone is diabetic by only using measurement that a regular person can get access to without proffesional help.</p>,
@@ -68,6 +70,7 @@ export const projects = [
     year: 2024,
     label: "Multi Label Image Classification",
     role: "Co-developer",
+    link: "https://github.com/Hndra04/CompetitionHology7.0",
 
     developmentProcess: [
       <p><b>What this project aims to solve:</b> Classify images with multiple labels {'type (t-shirt or hoodie) and color (red, yellow, blue, black, white)'}, focusing on accuracy and efficiency in handling image data.</p>,

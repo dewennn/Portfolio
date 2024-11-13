@@ -2,10 +2,23 @@ import React from 'react'
 import Header from '../sections/Header'
 import Footer from '../sections/Footer'
 import { experience, links } from '../data'
+import { motion } from 'framer-motion';
 
 const About = () => {
+  const pageTransition = {
+    initial: { opacity: 0, x: -50 },
+    animate: { opacity: 1, x: 0 },
+    exit: { opacity: 0, x: 50 },
+  };
+  
   return (
-    <div className='manrope'>
+    <motion.div
+    className=" manrope"
+    initial="initial"
+    animate="animate"
+    exit="exit"
+    variants={pageTransition}
+    transition={{ duration: 0.5 }}>
       <Header />
 
       <div className='px-8 sm:px-20 pt-10 pb-32 sm:pb-64'>
@@ -63,7 +76,8 @@ const About = () => {
       </div>
 
       <Footer />
-    </div>
+
+    </ motion.div>
   )
 }
 

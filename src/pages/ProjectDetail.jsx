@@ -15,7 +15,7 @@ const ProjectDetail = ({index = 0}) => {
           <p className='text-mygray'>{projects[index].desc}</p>
 
           <div className='flex items-center gap-3'>
-            <a href={links.github} target='_blank' className='flex items-center justify-center border-2 border-black px-5 py-2 gap-3 hover:filter hover:invert bg-white transition-all ease-in-out'>
+            <a href={projects[index].link} target='_blank' className='flex items-center justify-center border-2 border-black px-5 py-2 gap-3 hover:filter hover:invert bg-white transition-all ease-in-out'>
               <p className='font-bold'>Github</p>
               <img className='w-5 md:w-10' src={`${process.env.PUBLIC_URL}/assets/iconBlack/github.png`} alt="" />
             </a>
