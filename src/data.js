@@ -143,5 +143,5 @@ export const links = {
   linkedin: "https://www.linkedin.com/in/derren-malaka/",
   github: "https://github.com/dewennn",
   instagram: "https://www.instagram.com/drrn.m/",
-  cv: "https://drive.google.com/file/d/160GYDsl6MQKkscIRTpaiFcwTlSRYN71D/view"
+  cv: "https://drive.google.com/file/d/1Z2n_WT3iv1WpQVjkffD7PdSjbL-4wZwT/view?usp=sharing"
 }
