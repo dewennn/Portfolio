@@ -2,10 +2,12 @@ import React from 'react'
 import { links, projects } from '../data'
 import Header from '../sections/Header'
 import Footer from '../sections/Footer'
+import ScrollToTop from '../components/ScrollToTop'
 
 const ProjectDetail = ({index = 0}) => {
   return (
     <div className='manrope'>
+    <ScrollToTop />
     <Header />
     
     <div className='p-10'>

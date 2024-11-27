@@ -3,6 +3,7 @@ import Header from '../sections/Header'
 import Footer from '../sections/Footer'
 import { experience, links } from '../data'
 import { motion } from 'framer-motion';
+import ScrollToTop from '../components/ScrollToTop';
 
 const About = () => {
   const pageTransition = {
@@ -19,7 +20,8 @@ const About = () => {
     exit="exit"
     variants={pageTransition}
     transition={{ duration: 0.5 }}>
-      <Header />
+    <ScrollToTop />
+    <Header />
 
       <div className='px-8 sm:px-20 pt-10 pb-32 sm:pb-64'>
         <div className='flex flex-col gap-3'>

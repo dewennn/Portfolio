@@ -2,11 +2,13 @@ import React, { useState } from 'react'
 import Header from '../sections/Header'
 import Footer from '../sections/Footer'
 import { projects } from '../data'
+import ScrollToTop from '../components/ScrollToTop'
 
 const Projects = ({setChoice}) => {
 
   return (
     <div className='manrope'>
+      <ScrollToTop />
       <Header />
 
       <div className='flex flex-col gap-5 m-10 p-2 rounded-lg'>

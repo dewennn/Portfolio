@@ -5,6 +5,7 @@ import Featured from '../sections/Featured'
 import TechStack from '../sections/TechStack'
 import Footer from '../sections/Footer'
 import { motion } from 'framer-motion';
+import ScrollToTop from '../components/ScrollToTop'
 
 const Main = () => {
 
@@ -23,6 +24,7 @@ const Main = () => {
     variants={pageTransition}
     transition={{ duration: 0.5 }}
   >
+    <ScrollToTop />
     <Header />
     <Jumbotron />
     <Featured />
