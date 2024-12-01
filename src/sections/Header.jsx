@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { links } from '../data'
 
 const Header = () => {
 
@@ -12,7 +11,7 @@ const Header = () => {
   }
   function showSidebar(){
     setSidebar("right-0")
-    setCloser("opacity-50 z-20")
+    setCloser("opacity-50 z-[100]")
   }
 
   return (
@@ -22,18 +21,25 @@ const Header = () => {
       <a className='w-10' href='/Portfolio/'>
         <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="" />
       </a>
+
+      <div className='font-semibold flex gap-20 items-center'>
+        <a href="/Portfolio">Home</a>
+        <a href="/Portfolio/#/projects">Projects</a>
+        <a href="/Portfolio/#/about-me">Experience</a>
+      </div>
+
       <button className='w-10' onClick={() => {showSidebar()}}>
         <img src={`${process.env.PUBLIC_URL}/assets/iconBlack/burgerMenu.png`} alt="" />
       </button>
     </header>
 
-    <div className='w-full h-20'></div>
+    {/* <div className='w-full h-20'></div> */}
 
     {/* Sidebar */}
-    <div className={'fixed top-0 bottom-0 sm:w-[25%] w-[100%] bg-myblack px-10 py-5 transition-all ease-in-out z-30' + " " + sidebar}>
+    <div className={'fixed top-0 bottom-0 sm:w-[25%] w-[100%] bg-[#141414] px-10 py-5 transition-all ease-in-out z-[999]' + " " + sidebar}>
       <div className='flex justify-end'>
-        <button onClick={() => {hideSidebar()}}>
-          <img className='w-6' src={`${process.env.PUBLIC_URL}/assets/iconWhite/x.png`} alt="" />
+        <button onClick={() => {hideSidebar()}} className='w-10 h-10 flex justify-center items-center'>
+          <img src={`${process.env.PUBLIC_URL}/assets/iconWhite/x.png`} alt="" className='w-6'/>
         </button>
       </div>
 
@@ -50,6 +56,8 @@ const Header = () => {
 
     {/* closer */}
     <div className={'fixed top-0 left-0 right-0 bottom-0 bg-gray-400 transition-all ease-in-out' + ' ' + closer}></div>
+
+    <div className='w-full h-20'></div>
 
     </>
   )

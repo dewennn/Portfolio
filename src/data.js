@@ -13,14 +13,16 @@ export const experience = [
 
 export const featuredProject = [
 {
-  name: "BeatBuddy / Music Recommender",
+  name: "BeatBuddy",
   stack: ["python", "react", "flask"],
-  img: 'beatBuddy/recommendations.png'
+  img: 'beatBuddy/recommendations.png',
+  desc: "BeatBuddy is a machine learning project (Music Recommender System) hosted in a full-stack web application made with react and flask."
 },
 {
-  name: "DiabeTest / Machine Learning Classifier",
+  name: "DiabeTest",
   stack: ["python", "react", "flask"],
-  img: 'diabeTest/dashboard.png'
+  img: 'diabeTest/dashboard.png',
+  desc: "Diabetest is an app designed to predicting diabetes using few parameter to help diagnose diabetes probability quickly and easy using Machine Learning model."
 }
 ]
 
