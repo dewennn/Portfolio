@@ -23,7 +23,7 @@ const About = () => {
     <ScrollToTop />
     <Header />
 
-      <div className='px-8 sm:px-20 pt-10 pb-32 sm:pb-64'>
+      <div className='px-8 sm:px-20 pt-20 lg:pt-10 pb-32 sm:pb-64'>
         <div className='flex flex-col gap-3'>
           <h1 className='text-4xl sm:text-7xl font-bold'>About Me</h1>
           <div className='flex gap-1'>

@@ -10,7 +10,7 @@ const ProjectDetail = ({index = 0}) => {
     <ScrollToTop />
     <Header />
     
-    <div className='p-10'>
+    <div className='px-10 py-20 lg:p-10'>
       <div className='flex flex-col gap-5 md:gap-0 md:flex-row justify-between items-center mb-20'>
         <div className='w-full flex flex-col gap-5'>
           <h1 className='text-5xl font-bold'>{projects[index].name}</h1>

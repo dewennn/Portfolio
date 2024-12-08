@@ -17,18 +17,18 @@ const Header = () => {
   return (
     <>
     {/* Header */}
-    <header className='fixed top-0 left-0 right-0 flex justify-between px-10 py-5 z-10 bg-white'>
-      <a className='w-10' href='/Portfolio/'>
+    <header className='fixed top-0 left-0 right-0 flex justify-between px-10 py-4 z-10 bg-white'>
+      <a className='w-7' href='/Portfolio/'>
         <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="" />
       </a>
 
-      <div className='font-semibold flex gap-20 items-center'>
+      <div className='font-semibold hidden gap-20 items-center md:flex'>
         <a href="/Portfolio">Home</a>
         <a href="/Portfolio/#/projects">Projects</a>
-        <a href="/Portfolio/#/about-me">Experience</a>
+        <a href="/Portfolio/#/about-me">About Me</a>
       </div>
 
-      <button className='w-10' onClick={() => {showSidebar()}}>
+      <button className='w-7' onClick={() => {showSidebar()}}>
         <img src={`${process.env.PUBLIC_URL}/assets/iconBlack/burgerMenu.png`} alt="" />
       </button>
     </header>
@@ -38,7 +38,7 @@ const Header = () => {
     {/* Sidebar */}
     <div className={'fixed top-0 bottom-0 sm:w-[25%] w-[100%] bg-[#141414] px-10 py-5 transition-all ease-in-out z-[999]' + " " + sidebar}>
       <div className='flex justify-end'>
-        <button onClick={() => {hideSidebar()}} className='w-10 h-10 flex justify-center items-center'>
+        <button onClick={() => {hideSidebar()}} className='w-7 h-7 flex justify-center items-center'>
           <img src={`${process.env.PUBLIC_URL}/assets/iconWhite/x.png`} alt="" className='w-6'/>
         </button>
       </div>
@@ -57,8 +57,7 @@ const Header = () => {
     {/* closer */}
     <div className={'fixed top-0 left-0 right-0 bottom-0 bg-gray-400 transition-all ease-in-out' + ' ' + closer}></div>
 
-    <div className='w-full h-20'></div>
-
+    <div className='w-full h-4 lg:h-20'></div>
     </>
   )
 }
