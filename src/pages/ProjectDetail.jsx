@@ -1,14 +1,11 @@
 import React from 'react'
 import { links, projects } from '../data'
-import Header from '../sections/Header'
-import Footer from '../sections/Footer'
 import ScrollToTop from '../components/ScrollToTop'
 
 const ProjectDetail = ({index = 0}) => {
   return (
     <div className='manrope'>
     <ScrollToTop />
-    <Header />
     
     <div className='px-10 py-20 lg:p-10'>
       <div className='flex flex-col gap-5 md:gap-0 md:flex-row justify-between items-center mb-20'>
@@ -87,7 +84,6 @@ const ProjectDetail = ({index = 0}) => {
       </div>
     </div>
 
-    <Footer />
     </div>
   )
 }

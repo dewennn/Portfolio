@@ -18,3 +18,22 @@
 .bg-mygray{
   background-color: #F8F8F8;
 }
+
+.custom-scrollbar {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #ffffff #010101; /* Thumb color Track color */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px; /* Vertical scrollbar width */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #6b7280; /* Thumb color */
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #e5e7eb; /* Track color */
+}
+

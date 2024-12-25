@@ -35,6 +35,7 @@ export const projects = [
     label: "Music Recommender",
     role: "Lead Developer",
     link: "https://github.com/dewennn/Beat-Buddy",
+    type: "project",
 
     developmentProcess: [
     <p><b>What this project aim to solve:</b> Recommend similar musics to a music given by the user and a playlist of song  based on the user's taste.</p>,
@@ -54,6 +55,7 @@ export const projects = [
     label: "ML Classifier",
     role: "Developer",
     link: "https://github.com/Hndra04/Diabetest",
+    type: "project",
     
     developmentProcess: [
     <p><b>What this project aim to solve:</b> Give a prediction whether or not someone is diabetic by only using measurement that a regular person can get access to without proffesional help.</p>,
@@ -73,6 +75,7 @@ export const projects = [
     label: "Multi Label Image Classification",
     role: "Co-developer",
     link: "https://github.com/Hndra04/CompetitionHology7.0",
+    type: "project",
 
     developmentProcess: [
       <p><b>What this project aims to solve:</b> Classify images with multiple labels {'type (t-shirt or hoodie) and color (red, yellow, blue, black, white)'}, focusing on accuracy and efficiency in handling image data.</p>,
@@ -145,5 +148,6 @@ export const links = {
   linkedin: "https://www.linkedin.com/in/derren-malaka/",
   github: "https://github.com/dewennn",
   instagram: "https://www.instagram.com/drrn.m/",
-  cv: "https://drive.google.com/file/d/1Z2n_WT3iv1WpQVjkffD7PdSjbL-4wZwT/view?usp=sharing"
+  cv: "https://drive.google.com/file/d/1Z2n_WT3iv1WpQVjkffD7PdSjbL-4wZwT/view?usp=sharing",
+  kaggle: "https://www.kaggle.com/derrenmalaka/"
 }

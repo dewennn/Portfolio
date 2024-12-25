@@ -1,18 +1,12 @@
 import React, { useState } from 'react'
-import Header from '../sections/Header'
 import { motion } from 'framer-motion';
 import ScrollToTop from '../components/ScrollToTop'
-import { techStack, featuredProject, experience, links, projects } from '../data'
-import { button, div } from 'framer-motion/client';
+import { links, projects } from '../data'
+import { useNavigate } from 'react-router-dom';
 
-const Main = () => {
+const Main = ({setChoice}) => {
 
-  const[featured_idx, set_featured_idx] = useState(0)
-  const changeIdx = (num) => {
-    if(featured_idx + num >= 0 && featured_idx + num < featuredProject.length){
-      set_featured_idx(featured_idx + num)
-    }
-  }
+  const navigate = useNavigate();
 
   const pageTransition = {
     initial: { opacity: 0, x: -50 },
@@ -22,7 +16,6 @@ const Main = () => {
 
   return (
     <motion.div
-    className="manrope"
     initial="initial"
     animate="animate"
     exit="exit"
@@ -30,347 +23,90 @@ const Main = () => {
     transition={{ duration: 0.5 }}
   >
     <ScrollToTop />
-    <Header />
-    
-    <div className='sm:h-screen'>
-      <div className='h-full gap-2 flex-col lg:flex-row hidden lg:flex'>
-        {/* Left Part */}
-        <div className='w-1/4 flex flex-col gap-2 h-full'>
+    <div className="manrope bg-[#010101] min-h-screen text-white">
+      <div className='flex flex-col xl:flex-row justify-end'>
+        {/* Left Side */}
+        <section className='min-h-screen flex flex-col gap-20 pt-20 px-20 xl:w-1/3 xl:fixed left-0'>
+          <div className='flex flex-col gap-2'>
+            <h1 className='font-bold text-5xl bg-gradient-to-r from-[#3F54AB] to-[#89D2FF] bg-clip-text text-transparent'>Derren Malaka</h1>
 
-          {/* featured */}
-          <div className='px-5 py-10 flex flex-col gap-2 relative bg-mygray rounded-sm h-full'>
+            <h2 className='font-bold text-2xl bg-gradient-to-r from-[#FFFFFF] to-[#999999] bg-clip-text text-transparent'>Developer / Data Scientist</h2>
 
-            {/* Label */}
-            <div className='absolute top-[-20px] left-0 w-full flex justify-center'>
-                <div className='font-semibold bg-[#C4D9EF] rounded-full px-4 py-2 flex gap-2 items-center justify-center'>
-                  <h1>Featured</h1>
-                  <div className='w-6'><img src={process.env.PUBLIC_URL + '/assets/iconColor/star.png'} alt="" /></div>
-                </div>
-              </div>
+            <div className='flex gap-3'>
+              <a href={links.linkedin} target='_blank' rel='noopener noreferrer'> <img src={`${process.env.PUBLIC_URL}/assets/iconColor/linkedin.png`} alt="" className='w-10'/></a>
 
-            {/* image */}
-              <div className='w-full rounded-sm flex items-center'>
-                <img src={process.env.PUBLIC_URL + '/images/' + featuredProject[featured_idx].img} alt="" className='rounded-sm w-full h-full object-scale-down'/>
-              </div>
+              <a href={links.github} target='_blank' rel='noopener noreferrer'><img src={`${process.env.PUBLIC_URL}/assets/iconColor/github.png`} alt="" className='w-10'/></a>
 
-            {/* details */}
-              <div className='flex justify-between mb-2'>
-                <h1 className='font-semibold'>{featuredProject[featured_idx].name}</h1>
-
-                <div className='flex gap-2'>
-                  {
-                    featuredProject[featured_idx].stack.map((s) => (
-                      <div className='w-6'>
-                        <img src={process.env.PUBLIC_URL + '/assets/iconColor/' + s + '.png'} alt="dsad" />
-                      </div>
-                    ))
-                  }
-                </div>
-              </div>
-
-              <div className='h-20 text-sm'>
-                {featuredProject[featured_idx].desc}
-              </div>
-            
-            {/* Buttons */}
-              <div className='flex justify-between'>
-                <button className='w-11'><img src={process.env.PUBLIC_URL + '/assets/iconColor/arrowColor.png'} alt="" onClick={() => {changeIdx(-1)}}/></button>
-
-                <div className='flex gap-3 items-center'>
-                  {featuredProject.map((s, idx) => (
-                    <button className={`w-2 h-2 rounded-full ${idx == featured_idx ? 'bg-yellow-300 border border-black':'bg-gray-500'}`} onClick={()=>{set_featured_idx(idx)}}></button>
-                  ))}
-                </div>
-
-                <button className='w-11 rotate-180'><img src={process.env.PUBLIC_URL + '/assets/iconColor/arrowColor.png'} alt="" onClick={() => {changeIdx(1)}}/></button>
-              </div>
-            
+              <a href={links.kaggle} target='_blank' rel='noopener noreferrer'><img src={`${process.env.PUBLIC_URL}/assets/iconColor/kaggle.png`} alt="" className='w-10'/></a>
+            </div>
           </div>
 
-          {/* Experience */}
-          <div className='px-5 py-12 flex flex-col gap-2 relative bg-mygray rounded-sm'>
+          <div className='flex flex-col gap-8'>
+              <p>
+              Derren is a final-year Computer Science student and a part-time teacher at Timedoor Academy, passionate about developing applications and analyzing data.
 
-            {/* Label */}
-              <div className='absolute top-[-20px] left-0 w-full z-50 flex justify-center'>
-                <div className='font-semibold bg-[#C4D9EF] rounded-full px-4 py-2 flex gap-2 items-center justify-center'>
-                  <h1>Experience</h1>
-                </div>
+              <br /><br />
+
+              With experience in full-stack web application development, UI/UX design, machine learning model development, data analysis, and data visualization,
+
+              <br /><br />
+
+              Derren excels at creating data-driven solutions to solve real-world problems.
+
+              <br /><br />
+
+              His goal is to continually learn and grow within this field, leveraging data and technology to make a meaningful impact in every organization and community he is part of.
+              </p>
+
+              <a href={links.cv} target='_blank' rel='noopener noreferrer' className='underline text-[#5A9FD4] font-semibold text-2xl'>Take a look at my Resume</a>
+
+              <div className='text-center bg-gray-700 py-2 rounded-full font-semibold text-lg xl:hidden'>
+                Take a look at my Projects
               </div>
+            </div>
+        </section>
 
-            {/* Content */}
-              <div className='flex flex-col gap-8'>
-                {
-                  experience.map((e) => (
-                    <div className='flex flex-col'>
-                      <h1 className='font-semibold'>{e.title}</h1>
+        {/* Right Side */}
+        <section className='min-h-screen flex flex-col gap-20 pt-20 px-20 w-full xl:w-2/3 items-end'>
+          <h1 className='font-bold text-5xl bg-gradient-to-r from-[#89D2FF] to-[#3F54AB] bg-clip-text text-transparent'>My Projects</h1>
 
-                      <div className='text-sm text-gray-500'>
-                        <p>{e.company}</p>
-                        <p>{e.duration}</p>
+          <div className='w-full flex flex-wrap gap-x-8 gap-y-10 custom-scrollbar'>
+            {
+              projects.map((project, idx) => (
+                <div className='h-[520px] w-[450px] text-white flex flex-col gap-4'>
+                  <div className='w-full h-[250px] rounded-md'>
+                    <img src={`${process.env.PUBLIC_URL}/images/${project.thumbnail}`} alt="" className='rounded-md object-fill w-full h-full'/>
+                  </div>
+
+                  <div className='flex flex-col gap-10'>
+                    <div className='flex flex-col gap-3'>
+                      <div className='flex flex-col justify-between'>
+                        <h3 className='text-2xl font-bold'>{project.name}</h3>
+
+                        <h4 className='text-[#5A9FD4] font-bold'>{project.label}</h4>
+                      </div>
+
+                      <div>
+                        {project.desc.length > 200 
+                          ? `${project.desc.slice(0, 200)}...` 
+                          : project.desc
+                        }
                       </div>
                     </div>
-                  ))
-                }
-              </div>
-
+                    
+                    <button className='w-full bg-[#5A9FD4] bg-opacity-80 py-3 rounded-full font-bold text-lg text-center' onClick={() => {
+                      setChoice(idx)
+                      navigate('project-detail')
+                    }}>View More</button>
+                  </div>
+                </div>
+              ))
+            }
           </div>
-
-        </div>
-        
-        {/* Middle Part */}
-        <div className='w-1/2 bg-mygray rounded-sm p-10 flex flex-col gap-10'>
-          
-          {/* Name & Title */}
-            <div className='flex flex-col items-center gap-5 py-20'>
-              <div className='font-bold flex gap-3 sm:gap-5 items-center'>
-                <h1 className='text-4xl sm:text-4xl'>Hi, I'm Derren</h1>
-                <img className='w-8 h-8 sm:w-10 sm:h-10 animate-wave' src={`${process.env.PUBLIC_URL}/assets/iconBlack/hand_wave.png`} alt="" />
-              </div>
-
-              <h2 className='cormorant font-semibold text-base sm:text-lg md:text-2xl'>
-                Full-stack <i>developer</i> | Machine Learning <i>engineer</i> | Part-time <i>teacher</i>
-              </h2>
-              
-              <a className='flex gap-2 items-center  px-4 py-2 border-4 rounded-full border-[#C4D9EF]' href="/Portfolio/#/about-me">
-                <div>
-                  <img className='w-4 h-auto' src={`${process.env.PUBLIC_URL}/assets/iconGray/diagonal.png`} alt="" />
-                </div>
-                
-                <p className='font-semibold text-myGray'>About Me</p>
-              </a>
-            </div>
-          
-          {/* Divider */}
-            <div className='w-full h-8 bg-white'></div>
-          
-          {/* Links */}
-            <div className='flex gap-3 justify-center text-[12px] sm:text-base py-10 items-center h-full'>
-              <a href={links.cv} target='_blank' className='flex items-center justify-center border-2 border-black px-5 py-2 gap-3 hover:filter hover:invert bg-white transition-all ease-in-out'>
-                <p className='font-bold'>CV</p>
-                <img className='w-5 sm:w-7' src={`${process.env.PUBLIC_URL}/assets/iconBlack/download.png`} alt="" />
-              </a>
-
-              <a href={links.linkedin} target='_blank' className='flex items-center justify-center border-2 border-black px-5 py-2 gap-3 hover:filter hover:invert bg-white transition-all ease-in-out'>
-                <p className='font-bold'>LinkedIn</p>
-                <img className='w-5 sm:w-7' src={`${process.env.PUBLIC_URL}/assets/iconBlack/linkedin.png`} alt="" />
-              </a>
-
-              <a href={links.github} target='_blank' className='flex items-center justify-center border-2 border-black px-5 py-2 gap-3 hover:filter hover:invert bg-white transition-all ease-in-out'>
-                <p className='font-bold'>Github</p>
-                <img className='w-5 sm:w-7' src={`${process.env.PUBLIC_URL}/assets/iconBlack/github.png`} alt="" />
-              </a>
-            </div>
-        </div>
-        
-        {/* Right Part */}
-        <div className='w-1/4 rounded-sm flex flex-col gap-3'>
-
-            {/* Tech Stack */}
-            <div className='px-5 py-20 flex flex-col gap-2 relative bg-mygray rounded-sm'>
-
-              {/* Label */}
-                <div className='absolute top-[-20px] left-0 w-full z-0 flex justify-center'>
-                  <div className='font-semibold bg-[#C4D9EF] rounded-full px-4 py-2 flex gap-2 items-center justify-center'>
-                    <div className='w-6'><img src={process.env.PUBLIC_URL + '/assets/iconColor/tech.png'} alt="" /></div>
-                    <h1>Tech Stack</h1>
-                  </div>
-                </div>
-
-              {/* Content */}
-                <div className='grid grid-cols-4 gap-y-10'>
-                  {techStack.map((item) => (
-                    <div className={`flex flex-col justify-center items-center gap-5 w-full`}>
-                      <div className='flex justify-center'>
-                        <img className='w-1/2' src={`${process.env.PUBLIC_URL}/assets/iconColor/${item.img}.png`} alt="" />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-            </div>
-
-            <a href='/Portfolio/#/projects' className='flex flex-col items-center justify-center w-full h-full text-2xl font-semibold bg-mygray rounded-sm border-4 border-[#C4D9EF] hover:bg-[#C4D9EF] transition-all ease-linear'>
-              <div>Take a look at my</div>
-              <div className='flex gap-3 items-center'>
-                <div>Projects {`[${projects.length}]`}</div>
-                <div>
-                  <img className='w-4 h-auto' src={`${process.env.PUBLIC_URL}/assets/iconGray/diagonal.png`} alt="" />
-                </div>
-              </div>
-            </a>
-        </div>
-      </div>
-
-      <div className='h-full gap-2 flex-col lg:flex-row flex lg:hidden'>
-        
-        {/* Middle Part */}
-        <div className='w-full bg-mygray rounded-sm px-10 py-20 flex flex-col gap-10'>
-          
-          {/* Name & Title */}
-            <div className='flex flex-col items-center gap-2 py-5'>
-              <div className='font-bold flex gap-3 sm:gap-5 items-center'>
-                <h1 className='text-4xl sm:text-4xl'>Hi, I'm Derren</h1>
-                <img className='w-8 h-8 sm:w-10 sm:h-10 animate-wave' src={`${process.env.PUBLIC_URL}/assets/iconBlack/hand_wave.png`} alt="" />
-              </div>
-
-              <h2 className='cormorant font-semibold text-sm sm:text-lg md:text-2xl'>
-                Full-stack <i>developer</i> | Machine Learning <i>engineer</i> | Part-time <i>teacher</i>
-              </h2>
-              
-              <a className='flex gap-2 items-center  px-4 py-2 border-4 rounded-full border-[#C4D9EF]' href="/Portfolio/#/about-me">
-                <div>
-                  <img className='w-4 h-auto' src={`${process.env.PUBLIC_URL}/assets/iconGray/diagonal.png`} alt="" />
-                </div>
-                
-                <p className='font-semibold text-myGray'>About Me</p>
-              </a>
-            </div>
-          
-          {/* Divider */}
-            <div className='w-full h-2 bg-white'></div>
-          
-          {/* Links */}
-            <div className='flex gap-3 justify-center text-[12px] sm:text-base py-10'>
-              <a href={links.cv} target='_blank' className='flex items-center justify-center border-2 border-black px-5 py-2 gap-3 hover:filter hover:invert bg-white transition-all ease-in-out'>
-                <p className='font-bold'>CV</p>
-                <img className='w-5 sm:w-7' src={`${process.env.PUBLIC_URL}/assets/iconBlack/download.png`} alt="" />
-              </a>
-
-              <a href={links.linkedin} target='_blank' className='flex items-center justify-center border-2 border-black px-5 py-2 gap-3 hover:filter hover:invert bg-white transition-all ease-in-out'>
-                <p className='font-bold'>LinkedIn</p>
-                <img className='w-5 sm:w-7' src={`${process.env.PUBLIC_URL}/assets/iconBlack/linkedin.png`} alt="" />
-              </a>
-
-              <a href={links.github} target='_blank' className='flex items-center justify-center border-2 border-black px-5 py-2 gap-3 hover:filter hover:invert bg-white transition-all ease-in-out'>
-                <p className='font-bold'>Github</p>
-                <img className='w-5 sm:w-7' src={`${process.env.PUBLIC_URL}/assets/iconBlack/github.png`} alt="" />
-              </a>
-            </div>
-        </div>
-
-        <div className='flex gap-2 flex-col sm:flex-row h-full'>
-          {/* Left Part */}
-            <div className='w-full sm:w-1/2 flex flex-col gap-2 h-full'>
-              {/* featured */}
-              <div className='px-5 py-10 flex flex-col gap-2 relative bg-mygray rounded-sm'>
-
-                {/* Label */}
-                <div className='absolute top-[-20px] left-0 w-full flex justify-center'>
-                    <div className='font-semibold bg-[#C4D9EF] rounded-full px-4 py-2 flex gap-2 items-center justify-center'>
-                      <h1>Featured</h1>
-                      <div className='w-6'><img src={process.env.PUBLIC_URL + '/assets/iconColor/star.png'} alt="" /></div>
-                    </div>
-                  </div>
-
-                {/* image */}
-                  <div className='w-full rounded-sm flex items-center'>
-                    <img src={process.env.PUBLIC_URL + '/images/' + featuredProject[featured_idx].img} alt="" className='rounded-sm w-full h-full object-scale-down'/>
-                  </div>
-
-                {/* details */}
-                  <div className='flex justify-between mb-2'>
-                    <h1 className='font-semibold'>{featuredProject[featured_idx].name}</h1>
-
-                    <div className='flex gap-2'>
-                      {
-                        featuredProject[featured_idx].stack.map((s) => (
-                          <div className='w-6'>
-                            <img src={process.env.PUBLIC_URL + '/assets/iconColor/' + s + '.png'} alt="dsad" />
-                          </div>
-                        ))
-                      }
-                    </div>
-                  </div>
-
-                  <div className='h-20 text-sm'>
-                    {featuredProject[featured_idx].desc}
-                  </div>
-                
-                {/* Buttons */}
-                  <div className='flex justify-between'>
-                    <button className='w-11'><img src={process.env.PUBLIC_URL + '/assets/iconColor/arrowColor.png'} alt="" onClick={() => {changeIdx(-1)}}/></button>
-
-                    <div className='flex gap-3 items-center'>
-                      {featuredProject.map((s, idx) => (
-                        <button className={`w-2 h-2 rounded-full ${idx == featured_idx ? 'bg-yellow-300 border border-black':'bg-gray-500'}`} onClick={()=>{set_featured_idx(idx)}}></button>
-                      ))}
-                    </div>
-
-                    <button className='w-11 rotate-180'><img src={process.env.PUBLIC_URL + '/assets/iconColor/arrowColor.png'} alt="" onClick={() => {changeIdx(1)}}/></button>
-                  </div>
-                
-              </div>
-
-              {/* Experience */}
-              <div className='px-5 py-10 flex flex-col gap-2 relative bg-mygray rounded-sm'>
-
-                {/* Label */}
-                  <div className='absolute top-[-20px] left-0 w-full z-0 flex justify-center'>
-                    <div className='font-semibold bg-[#C4D9EF] rounded-full px-4 py-2 flex gap-2 items-center justify-center'>
-                      <h1>Experience</h1>
-                    </div>
-                  </div>
-
-                {/* Content */}
-                  <div className='flex flex-col gap-8'>
-                    {
-                      experience.map((e) => (
-                        <div className='flex flex-col'>
-                          <h1 className='font-semibold'>{e.title}</h1>
-
-                          <div className='text-sm text-gray-500'>
-                            <p>{e.company}</p>
-                            <p>{e.duration}</p>
-                          </div>
-                        </div>
-                      ))
-                    }
-                  </div>
-
-              </div>
-
-            </div>
-
-           {/* Right Part */}
-            <div className='w-full sm:w-1/2 rounded-sm flex flex-col gap-3 h-full'>
-
-              {/* Tech Stack */}
-              <div className='px-5 py-20 flex flex-col gap-2 relative bg-mygray rounded-sm'>
-
-                {/* Label */}
-                  <div className='absolute top-[-20px] left-0 w-full z-0 flex justify-center'>
-                    <div className='font-semibold bg-[#C4D9EF] rounded-full px-4 py-2 flex gap-2 items-center justify-center'>
-                      <div className='w-6'><img src={process.env.PUBLIC_URL + '/assets/iconColor/tech.png'} alt="" /></div>
-                      <h1>Tech Stack</h1>
-                    </div>
-                  </div>
-
-                {/* Content */}
-                  <div className='grid grid-cols-4 gap-y-10'>
-                    {techStack.map((item) => (
-                      <div className={`flex flex-col justify-center items-center gap-5 w-full`}>
-                        <div className='flex justify-center'>
-                          <img className='w-1/3 sm:w-1/2' src={`${process.env.PUBLIC_URL}/assets/iconColor/${item.img}.png`} alt="" />
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-
-              </div>
-
-              <a href='/Portfolio/#/projects' className='flex flex-col items-center justify-center w-full h-64 sm:h-full text-2xl font-semibold bg-mygray rounded-sm border-4 border-[#C4D9EF] hover:bg-[#C4D9EF] transition-all ease-linear'>
-                <div>Take a look at my</div>
-                <div className='flex gap-3 items-center'>
-                  <div>Projects {`[${projects.length}]`}</div>
-                  <div>
-                    <img className='w-4 h-auto' src={`${process.env.PUBLIC_URL}/assets/iconGray/diagonal.png`} alt="" />
-                  </div>
-                </div>
-              </a>
-            </div>
-        </div>
+        </section>
       </div>
     </div>
+    
   </motion.div>
   )
 }
