@@ -26,30 +26,37 @@ const Main = ({setChoice}) => {
     <div className="manrope bg-[#010101] min-h-screen text-white">
       <div className='flex flex-col xl:flex-row justify-end'>
         {/* Left Side */}
-        <section className='min-h-screen flex flex-col gap-6 pt-14 px-20 xl:w-1/3 xl:fixed left-0'>
+        <section className='min-h-screen flex flex-col gap-6 pt-10 px-20 xl:w-1/3 xl:fixed left-0 border-r-2 border-white border-opacity-40 top-0 bottom-0'>
           <div className='flex flex-col gap-2'>
-            <h1 className='font-bold text-5xl bg-gradient-to-r from-[#3F54AB] to-[#89D2FF] bg-clip-text text-transparent'>Derren Malaka</h1>
+            <h1 className='font-bold text-4xl bg-gradient-to-r from-[#3F54AB] to-[#89D2FF] bg-clip-text text-transparent'>Derren Malaka</h1>
 
-            <h2 className='font-bold text-2xl bg-gradient-to-r from-[#FFFFFF] to-[#999999] bg-clip-text text-transparent'>Developer / Data Scientist</h2>
+            <h2 className='font-bold text-xl bg-gradient-to-r from-[#FFFFFF] to-[#999999] bg-clip-text text-transparent'>Developer / Data Scientist</h2>
 
             <div className='flex gap-3'>
-              <a href={links.linkedin} target='_blank' rel='noopener noreferrer'> <img src={`${process.env.PUBLIC_URL}/assets/iconColor/linkedin.png`} alt="" className='w-10'/></a>
+              <a href={links.linkedin} target='_blank' rel='noopener noreferrer'> <img src={`${process.env.PUBLIC_URL}/assets/iconColor/linkedin.png`} alt="" className='w-8'/></a>
 
-              <a href={links.github} target='_blank' rel='noopener noreferrer'><img src={`${process.env.PUBLIC_URL}/assets/iconColor/github.png`} alt="" className='w-10'/></a>
+              <a href={links.github} target='_blank' rel='noopener noreferrer'><img src={`${process.env.PUBLIC_URL}/assets/iconColor/github.png`} alt="" className='w-8'/></a>
 
-              <a href={links.kaggle} target='_blank' rel='noopener noreferrer'><img src={`${process.env.PUBLIC_URL}/assets/iconColor/kaggle.png`} alt="" className='w-10'/></a>
+              <a href={links.kaggle} target='_blank' rel='noopener noreferrer'><img src={`${process.env.PUBLIC_URL}/assets/iconColor/kaggle.png`} alt="" className='w-8'/></a>
             </div>
           </div>
 
-          <div className='flex flex-col gap-8'>
+          <div className='flex flex-col gap-4'>
               <p>
-              Derren is a final-year Computer Science student and a part-time teacher at Timedoor Academy, passionate about developing applications and analyzing data.
+              Derren is a <b className='text-[#89D2FF]'>final-year Computer Science student</b> and a <b className='text-[#89D2FF]'>part-time teacher at Timedoor Academy</b>, passionate about developing applications and analyzing data.
 
               <br /><br />
 
-              With experience in full-stack web application development, UI/UX design, machine learning model development, data analysis, and data visualization,
+              With experience in
+              <ol className='list-disc list-inside'>
+                <li>full-stack web application development,</li>
+                <li>UI/UX design,</li>
+                <li>machine learning model development,</li>
+                <li>data analysis,</li>
+                <li>and data visualization,</li>
+              </ol>
 
-              <br /><br />
+              <br />
 
               Derren excels at creating data-driven solutions to solve real-world problems.
 
@@ -58,7 +65,7 @@ const Main = ({setChoice}) => {
               His goal is to continually learn and grow within this field, leveraging data and technology to make a meaningful impact in every organization and community he is part of.
               </p>
 
-              <a href={links.cv} target='_blank' rel='noopener noreferrer' className='underline text-[#5A9FD4] font-semibold text-2xl'>Take a look at my Resume</a>
+              <a href={links.cv} target='_blank' rel='noopener noreferrer' className='underline text-[#5A9FD4] font-semibold text-lg'>Take a look at my Resume</a>
 
               <div className='text-center bg-gray-700 py-2 rounded-full font-semibold text-lg xl:hidden'>
                 Take a look at my Projects
@@ -67,15 +74,15 @@ const Main = ({setChoice}) => {
         </section>
 
         {/* Right Side */}
-        <section className='min-h-screen flex flex-col gap-20 pt-14 px-20 w-full xl:w-2/3 items-end'>
-          <h1 className='font-bold text-5xl bg-gradient-to-r from-[#89D2FF] to-[#3F54AB] bg-clip-text text-transparent'>My Projects</h1>
+        <section className='min-h-screen flex flex-col gap-8 py-10 px-20 w-full xl:w-2/3 items-end'>
+          <h1 className='font-bold text-4xl bg-gradient-to-r from-[#89D2FF] to-[#3F54AB] bg-clip-text text-transparent'>My Projects</h1>
 
           <div className='w-full flex flex-wrap gap-x-8 gap-y-10 custom-scrollbar'>
             {
               projects.map((project, idx) => (
                 <div className='h-[500px] w-[410px] text-white flex flex-col gap-4'>
-                  <div className='w-full h-[250px] rounded-md'>
-                    <img src={`${process.env.PUBLIC_URL}/images/${project.thumbnail}`} alt="" className='rounded-md object-fill w-full h-full'/>
+                  <div className='w-full h-[220px] rounded-md'>
+                    <img src={`${process.env.PUBLIC_URL}/images/${project.thumbnail}`} alt="" className='rounded-md object-cover w-full h-[220px]'/>
                   </div>
 
                   <div className='flex flex-col justify-between h-full'>
@@ -94,10 +101,12 @@ const Main = ({setChoice}) => {
                       </div>
                     </div>
                     
-                    <button className='w-full bg-[#5A9FD4] bg-opacity-80 py-3 rounded-full font-bold text-lg text-center' onClick={() => {
-                      setChoice(idx)
-                      navigate('project-detail')
-                    }}>View More</button>
+                    <div className='px-2 hover:px-0 transition-all ease-in-out'>
+                      <button className='w-full bg-[#5A9FD4] bg-opacity-80 hover:bg-opacity-100 py-3 rounded-full font-bold text-lg text-center' onClick={() => {
+                        setChoice(idx)
+                        navigate('project-detail')
+                      }}>View More</button>
+                    </div>
                   </div>
                 </div>
               ))

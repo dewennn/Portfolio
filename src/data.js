@@ -28,6 +28,30 @@ export const featuredProject = [
 
 export const projects = [
   {
+    name: "ASL Recognition",
+    desc: "This project develops an American Sign Language (ASL) recognition system using deep learning. It preprocesses ASL gesture images, applies feature extraction with OpenCV, and trains a neural network using TensorFlow. The workflow integrates data loading, clustering, and classification, showcasing practical applications for assistive technologies and enhanced communication solutions.",
+    stack: ["python", "react", "flask"],
+    year: 2024,
+    label: "Computer Vision",
+    role: "Lead Developer",
+    link: "https://github.com/dewennn/Sign_Language_Recognition",
+    type: "project",
+
+    developmentProcess: [
+      <>
+      <p>
+        <b>What this project aims to solve:</b> Recognize American Sign Language (ASL) alphabet gestures to facilitate communication for individuals with hearing or speech impairments through a machine-learning-based system.</p>,
+        <p><b>Background:</b> Using an ASL dataset containing gesture images, we aim to build a deep learning model that identifies and classifies gestures into their respective letters. This system can potentially assist in educational and assistive communication tools for the hearing-impaired community.</p>,
+        <p><b>Development:</b> We preprocess gesture images from a dataset by resizing and labeling them. We use clustering and scaling techniques to refine features and employ TensorFlow to train a neural network. The model is evaluated for accuracy and optimized to predict gestures reliably, enabling accurate recognition of ASL alphabets based on visual input.
+      </p>
+    </>
+    ],
+
+    keyComponents: ["Image Preprocessing", "Edge Detection", "Bag of Words Model", "CNN", "Streamlit"],
+    thumbnail: "asl/mockup.png",
+    images: ["asl/mockup.png"]
+  },
+  {
     name: "BeatBuddy",
     desc: "BeatBuddy is a machine learning project (Music Recommender System) hosted in a full-stack web application made with react and flask.",
     stack: ["python", "react", "flask"],
@@ -48,6 +72,27 @@ export const projects = [
     images: ["beatBuddy/search.png", "beatBuddy/recommendations.png"]
   },
   {
+    name: "Hology Data Mining Competition",
+    desc: 'This is a team submission for the "Hology" Data Mining Competition hosted by Universitas Brawijaya, finishing in the top 20 out of over 90 teams. As my first competition experience, it was incredibly rewarding and offered valuable lessons. I learned how to collaborate effectively under tight deadlines, engage in meaningful discussions, and coordinate efforts to maximize our strengths as a team.',
+    stack: ["python", "tensorflow"],
+    year: 2024,
+    label: "Multi Label Image Classification",
+    role: "Co-developer",
+    link: "https://github.com/Hndra04/CompetitionHology7.0",
+    type: "project",
+
+    developmentProcess: [
+      <p><b>What this project aims to solve:</b> Classify images with multiple labels {'type (t-shirt or hoodie) and color (red, yellow, blue, black, white)'}, focusing on accuracy and efficiency in handling image data.</p>,
+      <p><b>Background:</b> The project utilizes a dataset provided for the Hology competition by Universitas Brawijaya. The dataset includes images with multiple labels, presenting a complex classification challenge. The goal was to implement an efficient, accurate model to handle this multi-label classification task. Besides the final model performance, the code structure, decription, and explanation are also graded.</p>,
+      <p><b>Development:</b> From the given dataset we preprocess the images by normalizing the pixels value and using tensorlow to covert it to a tensor. Then we use SMOTE oversampling to balance the dataset. We use two different model to each predict the color and type. For color we use a CNN model and for type we use a CNN model with VGG16 architecture. Our final model performance measured with Exact Match Ratio is: 92.7%.
+      </p>
+    ],
+
+    keyComponents: ["Image Preprocessing", "Handling data imbalance", "CNN Model", "Hyperparameter Tuning"],
+    thumbnail: "hology/prediction.png",
+    images: ["hology/prediction.png", "hology/result.png"]
+  },
+  {
     name: "DiabeTest",
     desc: "Diabetest is an app designed to predicting diabetes using few parameter to help diagnose diabetes probability quickly and easy using Machine Learning model.",
     stack: ["python", "react", "flask"],
@@ -66,28 +111,6 @@ export const projects = [
     keyComponents: ["Data Preprocessing (scaling & handling imbalance)", "KNN", "SVM", "Logistic Regression" , "K-Means Clustering", "RESTful API made with Flask"],
     thumbnail: "diabeTest/dashboard.png",
     images: ["diabeTest/dashboard.png"]
-  },
-  {
-    name: "Hology Data Mining Competition",
-    desc: 'This is a team submission for the "Hology" Data Mining Competition hosted by Universitas Brawijaya, finishing in the top 20 out of over 90 teams. As my first competition experience, it was incredibly rewarding and offered valuable lessons. I learned how to collaborate effectively under tight deadlines, engage in meaningful discussions, and coordinate efforts to maximize our strengths as a team.',
-    stack: ["python", "tensorflow"],
-    year: 2024,
-    label: "Multi Label Image Classification",
-    role: "Co-developer",
-    link: "https://github.com/Hndra04/CompetitionHology7.0",
-    type: "project",
-
-    developmentProcess: [
-      <p><b>What this project aims to solve:</b> Classify images with multiple labels {'type (t-shirt or hoodie) and color (red, yellow, blue, black, white)'}, focusing on accuracy and efficiency in handling image data.</p>,
-      <p><b>Background:</b> The project utilizes a dataset provided for the Hology competition by Universitas Brawijaya. The dataset includes images with multiple labels, presenting a complex classification challenge. The goal was to implement an efficient, accurate model to handle this multi-label classification task. Besides the final model performance, the code structure, decription, and explanation are also graded.</p>,
-      <p><b>Development:</b> From the given dataset we preprocess the images by normalizing the pixels value and using tensorlow to covert it to a tensor. Then we use SMOTE oversampling to balance the dataset. We use two different model to each predict the color and type. For color we use a CNN model and for type we use a CNN model with VGG16 architecture. Our final model performance measured with Exact Match Ratio is: 92.7%.
-      </p>
-    ],
-  
-
-    keyComponents: ["Image Preprocessing", "Handling data imbalance", "CNN Model", "Hyperparameter Tuning"],
-    thumbnail: "hology/prediction.png",
-    images: ["hology/prediction.png", "hology/result.png"]
   }
 ]
 
