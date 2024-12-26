@@ -26,7 +26,7 @@ const Main = ({setChoice}) => {
     <div className="manrope bg-[#010101] min-h-screen text-white">
       <div className='flex flex-col xl:flex-row justify-end'>
         {/* Left Side */}
-        <section className='min-h-screen flex flex-col gap-20 pt-20 px-20 xl:w-1/3 xl:fixed left-0'>
+        <section className='min-h-screen flex flex-col gap-6 pt-14 px-20 xl:w-1/3 xl:fixed left-0'>
           <div className='flex flex-col gap-2'>
             <h1 className='font-bold text-5xl bg-gradient-to-r from-[#3F54AB] to-[#89D2FF] bg-clip-text text-transparent'>Derren Malaka</h1>
 
@@ -67,18 +67,18 @@ const Main = ({setChoice}) => {
         </section>
 
         {/* Right Side */}
-        <section className='min-h-screen flex flex-col gap-20 pt-20 px-20 w-full xl:w-2/3 items-end'>
+        <section className='min-h-screen flex flex-col gap-20 pt-14 px-20 w-full xl:w-2/3 items-end'>
           <h1 className='font-bold text-5xl bg-gradient-to-r from-[#89D2FF] to-[#3F54AB] bg-clip-text text-transparent'>My Projects</h1>
 
           <div className='w-full flex flex-wrap gap-x-8 gap-y-10 custom-scrollbar'>
             {
               projects.map((project, idx) => (
-                <div className='h-[520px] w-[450px] text-white flex flex-col gap-4'>
+                <div className='h-[500px] w-[410px] text-white flex flex-col gap-4'>
                   <div className='w-full h-[250px] rounded-md'>
                     <img src={`${process.env.PUBLIC_URL}/images/${project.thumbnail}`} alt="" className='rounded-md object-fill w-full h-full'/>
                   </div>
 
-                  <div className='flex flex-col gap-10'>
+                  <div className='flex flex-col justify-between h-full'>
                     <div className='flex flex-col gap-3'>
                       <div className='flex flex-col justify-between'>
                         <h3 className='text-2xl font-bold'>{project.name}</h3>
