@@ -28,6 +28,69 @@ export const featuredProject = [
 
 export const projects = [
   {
+    name: "YokBantu",
+    desc: 'YokBantu is a mobile application made with Java + Firebase. Inspired by an existing application "KitaBisa", this application allows user to donate to any charity they want, inspect said charity, and also track their donations.',
+    stack: ["android", "firebase", "java"],
+    year: 2024,
+    label: "Android Java Application (On Going)",
+    role: "Lead Developer",
+    link: "https://github.com/dewennn/YokBantu",
+    type: "project",
+
+    developmentProcess: [
+      <>
+      <p>
+        <b>What this project aims to solve:</b> Make it easy to spread awareness about issues that require donations and to donate to those causes.</p> <br/>
+
+        <p><b>Background:</b> Develop using Java with Android Studio and uses Firebase for the database.</p> <br/>
+
+        <p><b>Development:</b> This project implements RecyclerView and Adapter taking data straight from firebase. It has filtering capability and track the user's donation history.
+      </p>
+    </>
+    ],
+
+    keyComponents: ["Android Development", "Recycler View", "Adapter", "Firebase", "Android Studio"],
+    thumbnail: "yokBantu/mockup.png",
+    images: ["yokBantu/mockup.png"]
+  },
+  {
+    name: "Pasar Digital",
+    desc: "Pasar Digital is an online marketplace designed using NOTHING's design language. This application allows user to browse items, add them to their cart, and buy them. It also allows seller to upload and sell their products.",
+    stack: ["mongoDb", "express", "react", "node"],
+    year: 2024,
+    label: "MERN stack Web Application (On Going)",
+    role: "Lead Developer",
+    link: "https://github.com/dewennn/YokBantu",
+    type: "project",
+
+    developmentProcess: [
+      <>
+        <p>
+          <b>What this project aims to solve:</b> To create a modern and user-friendly marketplace with a sleek design.
+        </p>
+        <br />
+    
+        <p>
+          <b>Background:</b> The project leverages the MERN stack for development, with APIs rigorously tested using Postman to ensure reliability.
+        </p>
+        <br />
+    
+        <p>
+          <b>Development:</b> The marketplace includes core functionalities such as user authentication, dynamic content rendering, and seamless CRUD operations, providing a robust full-stack solution.
+        </p>
+      </>,
+    ],
+    
+    keyComponents: [
+      "Full-stack Web Development",
+      "API Development",
+      "MongoDB Integration",
+      "CRUD Functionality",
+    ],
+    thumbnail: "pasarDigital/mockup.png",
+    images: ["pasarDigital/mockup.png"]
+  },
+  {
     name: "ASL Recognition",
     desc: "This project develops an American Sign Language (ASL) recognition system using deep learning. It preprocesses ASL gesture images, applies feature extraction with OpenCV, and trains a neural network using TensorFlow. The workflow integrates data loading, clustering, and classification, showcasing practical applications for assistive technologies and enhanced communication solutions.",
     stack: ["python", "react", "flask"],
@@ -40,9 +103,11 @@ export const projects = [
     developmentProcess: [
       <>
       <p>
-        <b>What this project aims to solve:</b> Recognize American Sign Language (ASL) alphabet gestures to facilitate communication for individuals with hearing or speech impairments through a machine-learning-based system.</p>,
-        <p><b>Background:</b> Using an ASL dataset containing gesture images, we aim to build a deep learning model that identifies and classifies gestures into their respective letters. This system can potentially assist in educational and assistive communication tools for the hearing-impaired community.</p>,
-        <p><b>Development:</b> We preprocess gesture images from a dataset by resizing and labeling them. We use clustering and scaling techniques to refine features and employ TensorFlow to train a neural network. The model is evaluated for accuracy and optimized to predict gestures reliably, enabling accurate recognition of ASL alphabets based on visual input.
+        <b>What this project aims to solve:</b> Recognize American Sign Language (ASL) alphabet gestures to facilitate communication for individuals with hearing or speech impairments through a machine-learning-based system.</p><br/>
+
+        <p><b>Background:</b> Using an ASL dataset containing gesture images, we aim to build a deep learning model that identifies and classifies gestures into their respective letters. This system can potentially assist in educational and assistive communication tools for the hearing-impaired community.</p><br/>
+
+        <p><b>Development:</b> We preprocess gesture images from a dataset by resizing and detecting their local feature. We train both Bag of Feature and Convolutional Neural Network model for this problem. Achieving an average accuracy of 80% for BoF and 90% for CNN.
       </p>
     </>
     ],
@@ -62,9 +127,13 @@ export const projects = [
     type: "project",
 
     developmentProcess: [
-    <p><b>What this project aim to solve:</b> Recommend similar musics to a music given by the user and a playlist of song  based on the user's taste.</p>,
-    <p><b>Background:</b> Using a dataset we get from kaggle containing music mined from spotify. We create a recommender system, where user can pick a song from said dataset and find songs similar to that song. User can also create a "taste profile", which is a list of song that the user like.</p>,
-    <p><b>Development:</b> We want to divide the songs to groups of "genre". But since there are no clear objective division of music genre. We decide to use "Optimal K Algorithm" {"("}Elbow & Silhoutte Method{")"} and decide to divide it to 11 group. We recommend similar musics by using the cosine-similarity function on the features compared to songs within the same cluster. Finally for user's taste we divide the songs within their "taste profile" based on their cluster, calculate the average, and then return songs that are most similar to the average of each division.</p>
+      <>
+        <p><b>What this project aim to solve:</b> Recommend similar musics to a music given by the user and a playlist of song  based on the user's taste.</p><br/>
+
+        <p><b>Background:</b> Using a dataset we get from kaggle containing music mined from spotify. We create a recommender system, where user can pick a song from said dataset and find songs similar to that song. User can also create a "taste profile", which is a list of song that the user like.</p><br/>
+
+        <p><b>Development:</b> We want to divide the songs to groups of "genre". But since there are no clear objective division of music genre. We decide to use "Optimal K Algorithm" {"("}Elbow & Silhoutte Method{")"} and decide to divide it to 11 group. We recommend similar musics by using the cosine-similarity function on the features compared to songs within the same cluster. Finally for user's taste we divide the songs within their "taste profile" based on their cluster, calculate the average, and then return songs that are most similar to the average of each division.</p>
+      </>
     ],
 
     keyComponents: ["Data Preprocessing", "Optimal K Algorithm", "PCA Algorithm", "K-Means Clustering", "RESTful API made with Flask"],

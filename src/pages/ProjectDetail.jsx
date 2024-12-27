@@ -16,7 +16,7 @@ const ProjectDetail = ({index = 0}) => {
           <div className='flex items-center gap-3'>
             <a href={projects[index].link} target='_blank' className='flex items-center justify-center border-2 border-black px-5 py-2 gap-3 hover:filter hover:invert bg-white transition-all ease-in-out'>
               <p className='font-bold'>Github</p>
-              <img className='w-5 md:w-10' src={`${process.env.PUBLIC_URL}/assets/iconBlack/github.png`} alt="" />
+              <img className='w-5 md:w-10 filter invert' src={`${process.env.PUBLIC_URL}/assets/iconColor/github.png`} alt="" />
             </a>
             {projects[index].stack.map((item) => (
               <div className='w-5 md:w-10'>
