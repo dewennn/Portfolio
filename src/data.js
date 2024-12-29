@@ -60,7 +60,7 @@ export const projects = [
     year: 2024,
     label: "MERN stack Web Application (On Going)",
     role: "Lead Developer",
-    link: "https://github.com/dewennn/YokBantu",
+    link: "https://github.com/dewennn/PasarDigital",
     type: "project",
 
     developmentProcess: [
