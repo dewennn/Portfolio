@@ -240,6 +240,6 @@ export const links = {
   linkedin: "https://www.linkedin.com/in/derren-malaka/",
   github: "https://github.com/dewennn",
   instagram: "https://www.instagram.com/drrn.m/",
-  cv: "https://drive.google.com/file/d/1Z2n_WT3iv1WpQVjkffD7PdSjbL-4wZwT/view?usp=sharing",
+  cv: "https://drive.google.com/file/d/1q5Sjy31cMV4JrbqfqlPZA2gmOfRIz0FX/view?usp=sharing",
   kaggle: "https://www.kaggle.com/derrenmalaka/"
 }
