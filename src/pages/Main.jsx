@@ -24,6 +24,7 @@ const Main = ({setChoice}) => {
   >
     <ScrollToTop />
     <div className="manrope bg-[#010101] min-h-screen text-white">
+
       <div className='flex flex-col xl:flex-row justify-end'>
         {/* Left Side */}
         <section className='min-h-screen flex flex-col gap-6 pt-12 px-10 sm:px-20 xl:w-1/3 xl:fixed left-0 border-r-2 border-white border-opacity-40 top-0 bottom-0'>
@@ -74,7 +75,8 @@ const Main = ({setChoice}) => {
         </section>
 
         {/* Right Side */}
-        <section className='min-h-screen flex flex-col gap-8 py-12 px-10 sm:px-20 w-full xl:w-2/3 items-end'>
+        <section className='min-h-screen flex flex-col gap-8 py-12 px-10 sm:px-20 w-full xl:w-2/3 items-end relative overflow-hidden'>
+        
           <h1 className='font-bold text-4xl bg-gradient-to-r from-[#89D2FF] to-[#3F54AB] bg-clip-text text-transparent'>My Projects</h1>
 
           <div className='w-full flex flex-wrap justify-end gap-x-8 gap-y-20 sm:gap-y-10 custom-scrollbar'>
