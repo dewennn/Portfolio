@@ -23,15 +23,15 @@ const Main = ({setChoice}) => {
     transition={{ duration: 0.5 }}
   >
     <ScrollToTop />
-    <div className="manrope bg-[#010101] min-h-screen text-white">
+    <div className="manrope bg-white min-h-screen text-black">
 
       <div className='flex flex-col xl:flex-row justify-end'>
         {/* Left Side */}
-        <section className='min-h-screen flex flex-col gap-6 pt-12 px-10 sm:px-20 xl:w-1/3 xl:fixed left-0 border-r-2 border-white border-opacity-40 top-0 bottom-0'>
+        <section className='min-h-screen flex flex-col gap-6 pt-12 px-10 sm:pl-20 xl:w-1/3 xl:fixed left-0 border-r-2 border-white border-opacity-40 top-0 bottom-0'>
           <div className='flex flex-col gap-2'>
-            <h1 className='font-bold text-4xl bg-gradient-to-r from-[#3F54AB] to-[#89D2FF] bg-clip-text text-transparent'>Derren Malaka</h1>
+            <h1 className='font-bold text-4xl'>Derren Malaka</h1>
 
-            <h2 className='font-bold text-xl bg-gradient-to-r from-[#FFFFFF] to-[#999999] bg-clip-text text-transparent'>Developer / Data Scientist</h2>
+            <h2 className='font-bold text-xl text-gray-600'>Developer / Data Scientist</h2>
 
             <div className='flex gap-3'>
               <a href={links.linkedin} target='_blank' rel='noopener noreferrer'> <img src={`${process.env.PUBLIC_URL}/assets/iconColor/linkedin.png`} alt="" className='w-8'/></a>
@@ -44,7 +44,7 @@ const Main = ({setChoice}) => {
 
           <div className='flex flex-col gap-4'>
               <p>
-              Derren is a <b className='text-[#89D2FF]'>final-year Computer Science student</b> and a <b className='text-[#89D2FF]'>part-time teacher at Timedoor Academy</b>, passionate about developing applications and analyzing data.
+              Derren is a <b className='text-[#3a98d3]'>final-year Computer Science student</b> and a <b className='text-[#3a98d3]'>part-time teacher at Timedoor Academy</b>, passionate about developing applications and analyzing data.
 
               <br /><br />
 
@@ -75,14 +75,14 @@ const Main = ({setChoice}) => {
         </section>
 
         {/* Right Side */}
-        <section className='min-h-screen flex flex-col gap-8 py-12 px-10 sm:px-20 w-full xl:w-2/3 items-end relative overflow-hidden'>
-        
-          <h1 className='font-bold text-4xl bg-gradient-to-r from-[#89D2FF] to-[#3F54AB] bg-clip-text text-transparent'>My Projects</h1>
+        <section className='min-h-screen flex flex-col gap-4 py-12 px-10 sm:px-20 w-full xl:w-2/3 items-start relative overflow-hidden'>
+          
+          <h1 className='font-bold text-2xl'>My Projects</h1>
 
           <div className='w-full flex flex-wrap justify-end gap-x-8 gap-y-20 sm:gap-y-10 custom-scrollbar'>
             {
               projects.map((project, idx) => (
-                <div className='w-[100%] lg:w-[48%] text-white flex flex-col gap-4'>
+                <div className='w-[100%] lg:w-[48%] text-black flex flex-col gap-4'>
                   <div className='w-full rounded-md'>
                     <img src={`${process.env.PUBLIC_URL}/images/${project.thumbnail}`} alt="" className='rounded-md object-cover w-full h-[100%]'/>
                   </div>
@@ -104,7 +104,7 @@ const Main = ({setChoice}) => {
                     </div>
                     
                     <div className='px-2 hover:px-0 transition-all ease-in-out'>
-                      <button className='w-full bg-[#5A9FD4] bg-opacity-80 hover:bg-opacity-100 py-3 rounded-full font-bold text-lg text-center' onClick={() => {
+                      <button className='w-full bg-[#5A9FD4] bg-opacity-80 hover:bg-opacity-100 py-3 rounded-full font-bold text-lg text-center text-white' onClick={() => {
                         setChoice(idx)
                         navigate('project-detail')
                       }}>View More</button>
