@@ -16,7 +16,7 @@ const ProjectDetail = ({index = 0}) => {
           <div className='flex items-center gap-3'>
             <a href={projects[index].link} target='_blank' className='flex items-center justify-center border-2 border-black px-5 py-2 gap-3 hover:filter hover:invert bg-white transition-all ease-in-out'>
               <p className='font-bold'>Github</p>
-              <img className='w-5 md:w-10 filter invert' src={`${process.env.PUBLIC_URL}/assets/iconColor/github.png`} alt="" />
+              <img className='w-5 md:w-10' src={`${process.env.PUBLIC_URL}/assets/iconColor/github.png`} alt="" />
             </a>
             {projects[index].stack.map((item) => (
               <div className='w-5 md:w-10'>
@@ -28,22 +28,22 @@ const ProjectDetail = ({index = 0}) => {
 
         <div className='w-full flex items-center md:items-end md:justify-end md:flex-col gap-1 md:gap-7'>
           <div className='flex flex-col items-end'>
-            <h1 className='cormorant text-3xl font-bold hidden md:block'>Year</h1>
-            <p className='text-xs md:text-2xl font-bold text-mygray'>{projects[index].year}</p>
+            <h1 className='text-2xl font-bold hidden md:block'>Year</h1>
+            <p className='text-xs md:text-xl font-bold text-mygray'>{projects[index].year}</p>
           </div>
 
           <div className='md:hidden'>|</div>
 
           <div className='flex flex-col items-end'>
-            <h1 className='cormorant text-3xl font-bold hidden md:block'>Category</h1>
-            <p className='text-xs md:text-2xl font-bold text-mygray'>{projects[index].label}</p>
+            <h1 className='text-2xl font-bold hidden md:block'>Category</h1>
+            <p className='text-xs md:text-xl font-bold text-mygray'>{projects[index].label}</p>
           </div>
 
           <div className='md:hidden'>|</div>
 
           <div className='flex flex-col items-end'>
-            <h1 className='cormorant text-3xl font-bold hidden md:block'>Role</h1>
-            <p className='text-xs md:text-2xl font-bold text-mygray'>{projects[index].role}</p>
+            <h1 className='text-2xl font-bold hidden md:block'>Role</h1>
+            <p className='text-xs md:text-xl font-bold text-mygray'>{projects[index].role}</p>
           </div>
         </div>
       </div>

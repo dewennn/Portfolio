@@ -27,7 +27,7 @@ const Main = ({setChoice}) => {
 
       <div className='flex flex-col xl:flex-row justify-end'>
         {/* Left Side */}
-        <section className='min-h-screen flex flex-col gap-6 pt-12 px-10 sm:pl-20 xl:w-1/3 xl:fixed left-0 border-r-2 border-white border-opacity-40 top-0 bottom-0'>
+        <section className='min-h-screen flex flex-col gap-6 pt-12 px-10 sm:px-20 xl:w-1/3 xl:fixed left-0 xl:border-r-2 border-gray-400 border-opacity-40 top-0 bottom-0'>
           <div className='flex flex-col gap-2'>
             <h1 className='font-bold text-4xl'>Derren Malaka</h1>
 
