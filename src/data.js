@@ -51,7 +51,7 @@ export const projects = [
 
     keyComponents: ["Android Development", "Recycler View", "Adapter", "Firebase", "Android Studio"],
     thumbnail: "yokBantu/mockup.png",
-    images: ["yokBantu/mockup.png"]
+    images: ["yokBantu/mockup.png", "yokbantu/ide.png"]
   },
   {
     name: "Pasar Digital",
@@ -88,7 +88,7 @@ export const projects = [
       "CRUD Functionality",
     ],
     thumbnail: "pasarDigital/mockup.png",
-    images: ["pasarDigital/mockup.png"]
+    images: ["pasarDigital/mockup.png", "pasarDigital/progress.png"]
   },
   {
     name: "ASL Recognition",
@@ -114,7 +114,7 @@ export const projects = [
 
     keyComponents: ["Image Preprocessing", "Edge Detection", "Bag of Words Model", "CNN", "Streamlit"],
     thumbnail: "asl/mockup.png",
-    images: ["asl/mockup.png"]
+    images: ["asl/mockup.png", "asl/ide.png"]
   },
   {
     name: "BeatBuddy",
@@ -159,7 +159,7 @@ export const projects = [
 
     keyComponents: ["Image Preprocessing", "Handling data imbalance", "CNN Model", "Hyperparameter Tuning"],
     thumbnail: "hology/prediction.png",
-    images: ["hology/prediction.png", "hology/result.png"]
+    images: ["hology/prediction.png", "hology/result.png", "hology/kaggle.png"]
   },
   {
     name: "DiabeTest",
